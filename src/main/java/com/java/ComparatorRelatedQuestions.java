@@ -2,10 +2,12 @@ package com.java;
 
 import com.java.model.Employee;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ComparatorRelatedQuestions {
 
@@ -21,6 +23,20 @@ public class ComparatorRelatedQuestions {
                 new Employee(7, "vitthal", "agarwal", "dehradun", "567", 26),
                 new Employee(8, "bhajan", "bishnoi", "ajmer", "345", 24),
                 new Employee(9, "hitaxi", "patel", "ahmedabad", "678", 25));
+
+        List<String> list = new ArrayList<>(List.of("a", "b", "c"));
+        System.out.println(list);
+
+        List<String> list1 = new ArrayList<>(
+                Stream.of("a", "b", "c").collect(Collectors.toList())
+        );
+
+        List<String> list2 = new ArrayList<>(
+                Stream.of("a", "b", "c").collect(Collectors.toCollection(ArrayList::new))
+        );
+        System.out.println(list2);
+
+        System.out.println(list1);
 
         List<String> fruitList = Arrays.asList("orange", "banana", "grapes", "apple", "malta", "strawberry", null);
 
@@ -43,11 +59,11 @@ public class ComparatorRelatedQuestions {
         System.out.println(employeeList);
 
         // 5th : using stream API
-        List<Employee> list = employeeList.stream()
+        List<Employee> list3 = employeeList.stream()
                 .sorted(Comparator.comparing(Employee::age)
                         .thenComparing(Employee::firstName))
                 .collect(Collectors.toList());
-        System.out.println(list);
+        System.out.println(list3);
 
     }
 
