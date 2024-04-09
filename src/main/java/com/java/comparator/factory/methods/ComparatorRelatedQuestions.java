@@ -1,4 +1,4 @@
-package com.java;
+package com.java.comparator.factory.methods;
 
 import com.java.model.Employee;
 

@@ -1,4 +1,4 @@
-package com.java;
+package com.java.javaTechie.groupingBy;
 
 import com.java.model.Student;
 
