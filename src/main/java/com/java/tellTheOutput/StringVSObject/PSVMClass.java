@@ -1,4 +1,4 @@
-package com.java.tricky.generic;
+package com.java.tellTheOutput.StringVSObject;
 
 public class PSVMClass {
 
