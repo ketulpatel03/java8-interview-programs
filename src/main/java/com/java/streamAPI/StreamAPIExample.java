@@ -40,8 +40,9 @@ public class StreamAPIExample {
         System.out.println("get count of int: " + intSummaryStatistics.getCount());
 
         // groupingBy department getting the 1st highest marks holder
-        Map<String, Optional<Student>> departmantwiseMaxMarks = studentList.stream().collect(Collectors.groupingBy(e -> e.getDepartment(),
-                Collectors.maxBy(Comparator.comparing(e -> e.getMarks()))));
+        Map<String, Optional<Student>> departmantwiseMaxMarks = studentList
+                .stream()
+                .collect(Collectors.groupingBy(e -> e.getDepartment(), Collectors.maxBy(Comparator.comparing(e -> e.getMarks()))));
         System.out.println("departmentwise max marks: " + departmantwiseMaxMarks);
 
         LongSummaryStatistics longSummaryStatistics = studentList.stream().collect(Collectors.summarizingLong(Student::getMarks));
