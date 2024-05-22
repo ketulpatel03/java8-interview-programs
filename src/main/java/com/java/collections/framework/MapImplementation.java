@@ -74,6 +74,12 @@ public class MapImplementation {
 //        hashTable.put(null, 8);
         System.out.println("HashTable implementation: " + hashTable);
 
+        Map<Integer, String> hMap = new HashMap<>();
+        hMap.put(1, "hi");
+        hMap.put(2, "bye");
+        Map<Integer, String> sMap = Collections.synchronizedMap(hMap);
+        System.out.println("SynchronizedHashMap implementation: " + sMap);
+
     }
 
 }
