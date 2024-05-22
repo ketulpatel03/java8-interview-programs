@@ -19,6 +19,7 @@ public class MapImplementation {
         hashMap.put(null, null);
         hashMap.put(7, null);
         hashMap.put(null, 8);
+        hashMap.put(9, null);
         System.out.println("HashMap implementation: " + hashMap);
 
         // LinkedHashMap
