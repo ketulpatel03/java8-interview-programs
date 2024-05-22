@@ -1,4 +1,4 @@
-package com.java.collections.framework;
+package com.java.collections.framework.map;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -20,6 +20,22 @@ public class MapImplementation {
         hashMap.put(7, null);
         hashMap.put(null, 8);
         hashMap.put(9, null);
+        hashMap.put(10, 2);
+        System.out.println("HashMap implementation: " + hashMap);
+
+        Set<Integer> integers = hashMap.keySet();
+        var iterator1 = integers.iterator();
+        while (iterator1.hasNext()){
+            System.out.println("Map keySet method: " + iterator1.next());
+        }
+
+        Collection<Integer> values = hashMap.values();
+        values.remove(null);
+        values.remove(2);
+        var iterator = values.iterator();
+        while (iterator.hasNext()) {
+            System.out.println("Map values method: " + iterator.next());
+        }
         System.out.println("HashMap implementation: " + hashMap);
 
         // LinkedHashMap
